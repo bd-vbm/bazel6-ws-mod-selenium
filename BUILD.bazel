@@ -1,0 +1,10 @@
+
+filegroup(
+    name = "all_apps",
+    srcs = [
+        "//java_app:app",
+        "//cpp_app:hello",
+        "//haskell:hello_hs",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,15 @@
+
+package(default_visibility = ["//visibility:public"]) 
+
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_binary(
+    name = "app",
+    srcs = ["App.java"],
+    main_class = "App",
+    deps = [
+        artifact("org.seleniumhq.selenium:selenium-java"),
+        artifact("org.testng:testng"),
+       "@maven//:org_seleniumhq_selenium_selenium_remote_driver",
+    ],
+)
